@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Experiences</title>
+		<link rel="stylesheet" href="../style/style.css"/>
+	</head>
+
+	<body>
+		<div id="header">
+				<div class="linkC boxStory"><a href="../Main/index.html">Home</a></div>
+				<div class="linkC boxExperience"><a href="experiences.html" target="_blank">Experiences</a></div>
+				<div class="linkC boxAbout"><a href="../Contact/contact.html" target="_blank">Contact</a></div>
+		</div>
+
+
+
+
+
+
+
+		<!-- Navigation -->
+    <header id="header">
+        
+        <a href="../Booking/booking.html" class="top-book">Book Now</a>
+
+    </header>
+
+
+
+    <!-- Page introduction -->
+    <section class="intro">
+        <h1>Emerald Escapes</h1>
+        <p>
+            Blah Blah blah and more blah blah
+        </p>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <input
+            type="search"
+            id="search"
+            placeholder="Search experiences..."
+            aria-label="Search experiences">
+
+        <select id="category" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="relaxation">City Break</option>
+            <option value="food">Culinary</option>
+            <option value="outdoor">Family</option>
+            <option value="culture">Countryside Cultural</option>
+        </select>
+
+        <select id="price" aria-label="Filter by price">
+            <option value="all">Any Price</option>
+            <option value="50">Up to €50</option>
+            <option value="100">Up to €100</option>
+            <option value="101">Over €100</option>
+        </select>
+
+        <button type="button" id="resetFilters">
+            Reset Filters
+        </button>
+    </section>
+
+
+
+
+
+
+
+
+
+    <p id="resultCount" aria-live="polite"></p>
+
+    <!-- Experience cards -->
+    <main class="experience-grid">
+
+        <article class="experience-card"
+                 data-category="relaxation" data-price="85">
+            <img src="../Images/FarmHam.jpg" alt="Farm spa retreat">
+
+            <div class="card-content">
+                <p class="category-label">RELAXATION</p>
+                <h2>Farm Spa Retreat</h2>
+                <p>Enjoy a peaceful escape surrounded by the Irish countryside.</p>
+
+                <div class="card-bottom">
+                    <span class="experience-price">From €85</span>
+                    <a href="../Booking/booking.html"
+                       class="book-button">Book Now</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card"
+                 data-category="food" data-price="35">
+            <img src="../Images/Whiskey.jpg" alt="Irish whiskey tasting">
+            
+            <div class="card-content">
+                <p class="category-label">FOOD & DRINK</p>
+                <h2>Whiskey Tasting</h2>
+                <p>Discover Irish whiskey and learn about its history and craft.</p>
+
+                <div class="card-bottom">
+                    <span class="experience-price">From €35</span>
+                    <a href="../Booking/booking.html"
+                       class="book-button">Book Now</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card"
+                 data-category="outdoor" data-price="50">
+            <img src="../Images/Hiking.jpg" alt="Irish countryside hiking">
+            
+            <div class="card-content">
+                <p class="category-label">OUTDOOR</p>
+                <h2>Countryside Adventure</h2>
+                <p>Explore beautiful landscapes and discover Ireland outdoors.</p>
+
+                <div class="card-bottom">
+                    <span class="experience-price">From €50</span>
+                    <a href="../Booking/booking.html"
+                       class="book-button">Book Now</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="experience-card"
+                 data-category="culture" data-price="45">
+            <img src="../Images/Pottery.jpg" alt="Pottery workshop">
+            
+            <div class="card-content">
+                <p class="category-label">ARTS & CULTURE</p>
+                <h2>Pottery Workshop</h2>
+                <p>Try a creative workshop and make something of your own.</p>
+
+                <div class="card-bottom">
+                    <span class="experience-price">From €45</span>
+                    <a href="../Booking/booking.html"
+                       class="book-button">Book Now</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <p id="noResults" hidden>
+        No experiences match your filters. Try changing your search.
+    </p>
+				
+
+	</body>
+</html>

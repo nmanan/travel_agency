@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contact</title>
+		<link rel="stylesheet" href="../style/style.css"/>
+	</head>
+
+	<body>
+		<div id="header">
+				<div class="linkC boxStory"><a href="../Main/index.html">Home</a></div>
+				<div class="linkC boxExperience"><a href="../Experiences/experiences.html" target="_blank">Experiences</a></div>
+				<div class="linkC boxAbout"><a href="contact.html" target="_blank">Contact</a></div>
+		</div>
+
+		<main class="contact">
+			<h1>Contact Us</h1>
+		    <p>
+		        Interested in our experiences?
+		        Send your request and we will get back to you.
+		    </p>
+
+		    <form action="#" method="post" class="contact-form">
+		    	<h2> Details</h2>
+
+		    	<label for="Name"> Name *</label>
+		        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        		<label for="email">Email Address *</label>
+        		<input type="email" id="email" name="email" placeholder="emeraldescapes@example.com" required>
+
+        		<label for="phone">Phone Number</label>
+        		<input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+        		<h2>Your Experience</h2>
+
+		        <label for="experience">Which experience interests you? *</label>
+		        <select id="experience" name="experience" required>
+		          <option value="">Please select an experience</option>
+		          <option value="farm-spa">City Break</option>
+		          <option value="food">Culinary Experiences</option>
+		          <option value="outdoors">Family</option>
+		          <option value="culture">Countryside Cultural</option>
+		          <option value="other">Not Sure Yet</option>
+		        </select>
+
+
+		        <label for="enquiryType">Type of Enquiry *</label>
+		        <select id="enquiryType" name="enquiryType" required>
+		          <option value="">Please select an enquiry type</option>
+		          <option value="general">General Information</option>
+		          <option value="booking">Booking</option>
+		          <option value="group">Group experience</option>
+		          <option value="other">Other</option>
+		        </select>
+
+		        <label for="date">Availibility</label>
+        		<input type="date" id="date" name="date">
+
+        		<label for="payment">Payment Method</label>
+        		<select id="payment" name="payment">
+        			<option value="">Select a type of payment</option>
+        			<option value="Card">Card</option>
+        			<option value="Transfer">Transfer</option>
+        			<option value="Cash">Cash</option>
+        		</select>
+		         
+		        <label for="message">Your Message *</label>
+        		<textarea id="message" name="message" rows="6" placeholder="Tell us what you'd like to know..."required></textarea>
+
+        		<button type="submit">Send Enquiry</button>
+
+       			<p class="form-note">Fields marked * are required.</p>
+
+		    </form>
+		</main>
+
+	</body>
+</html>

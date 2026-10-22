@@ -1,0 +1,501 @@
+body{
+
+background-color: #98FB98;
+}
+
+/********** MAIN SITE STYLE AREAS *************************/
+
+.bannerArea{
+	display:flex;
+	position:relative;
+	width:100%;
+	min-height: 60vh;
+	overflow:hidden;
+}
+
+.bannerArea img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.bannerArea h1{
+	position: absolute;
+	top:50%;
+	right: 5%;	
+
+    color: black;
+    font-family: papyrus;
+    font-size: 2rem;
+}
+
+
+/*********** LINKS MAIN SITE ************************/
+
+.link{
+	position: absolute;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 2rem;
+	top:0;
+}
+
+.link > a:hover{
+	font-size: 3rem;
+}
+
+/***********************************/
+
+
+.aboutUs{
+	display:flex;
+	min-height: 50vh;
+	justify-content: center;
+
+}
+
+.aboutUs div{
+	display:flex;
+	flex:1;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+/***********************************/
+
+.boxStory{
+	padding-left: 0;
+	background-color:#5FFB17;
+	position: relative;
+}
+
+.boxStory img{
+	position:relative;
+	width:50%;
+	height:60%;
+	object-fit: contain;
+	overflow: hidden;
+	top:20%;
+	right:20%;
+}
+
+
+/***********************************/
+
+
+.slider img {
+  position: absolute;
+  inset: 70px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider img.active{
+	opacity: 1;
+}
+
+/***********************************/
+
+.boxExperience{
+	background-color: white;
+	position: relative;
+
+}
+
+.boxExperience img{
+	position: absolute;
+	width: 65%;
+	height: 65%;
+	object-fit: cover;
+}
+
+@media(max-width: 600px){
+	.slideshow{
+		height: 200px;
+	}
+}
+
+/***********************************/
+
+
+.boxAbout{
+	background-color:#FF6700;
+	position: relative;
+}
+
+.experienceOverview{
+	display:flex;
+	min-height: 50vh;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/**************** EXPERIENCES PAGE ***********************/
+
+
+
+
+
+
+
+
+
+
+
+
+/********* CONTACT SITE PAGE **************************/
+
+#header{
+	display:flex;
+
+}
+#header{
+	background:#00FA9A;
+	font-size:100%;
+	width:100%;
+	height: 100px;
+
+}
+
+.linkC{
+	display:flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 2rem;
+	width:100%;
+	font-family: papyrus;
+}
+
+.linkC a{
+	color: black;
+}
+
+/************* FORM CONTACT PAGE **************************/
+
+.contact {
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #F5F5F5 /*#f7f8f4*/;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.contact h1 {
+  text-align: center;
+  color: #FF6700;
+  font-family: papyrus;
+}
+
+.contact > p {
+  text-align: center;
+  line-height: 1.6;
+  font-family: papyrus;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: papyrus;
+}
+
+.contact-form h2 {
+  color: #FF6700;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-family: papyrus;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 5px;
+  font-family: papyrus;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b8c5ba;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #64876b;
+  outline-offset: 1px;
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #00FA9A;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: papyrus;
+}
+
+.contact-form button:hover {
+  background-color: #24452f;
+}
+
+.form-note {
+  font-size: 13px;
+  color: #555;
+  font-family: papyrus;
+}
+
+@media (max-width: 600px) {
+  .contact-page {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+}
+
+
+/*************************************************/
+
+/* Navigation */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 5%;
+    background-color: #f0f2ff;
+    border-bottom: 5px solid #293b83;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #293b83;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.top-book,
+.book-button {
+    display: inline-block;
+    background-color: #fb9024;
+    color: #102849;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.top-book {
+    padding: 16px 24px;
+    white-space: nowrap;
+}
+
+/* Introduction */
+.intro {
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.intro h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 5%;
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 12px 15px;
+    border: 1px solid #c5cbe0;
+    border-radius: 7px;
+    background-color: white;
+    font: inherit;
+}
+
+.filters input {
+    flex: 1;
+    min-width: 180px;
+}
+
+.filters button {
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #e3e7f7;
+}
+
+#resultCount {
+    margin: 10px 5%;
+    color: #444;
+}
+
+/* Cards grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    padding: 20px 5% 50px;
+}
+
+/* Individual card */
+.experience-card {
+    background-color: #f0f2ff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card[hidden] {
+    display: none;
+}
+
+.experience-card img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.category-label {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #5869a8;
+}
+
+.card-content h2 {
+    font-size: 1.7rem;
+    margin: 10px 0;
+}
+
+.card-content > p:not(.category-label) {
+    color: #444;
+    line-height: 1.6;
+}
+
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.experience-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.book-button {
+    padding: 14px 20px;
+}
+
+.top-book:hover,
+.book-button:hover {
+    background-color: #e77b12;
+}
+
+#noResults {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive layout */
+@media (max-width: 750px) {
+    #header {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card img {
+        height: 240px;
+    }
+}
+
+@media (max-width: 450px) {
+    #header {
+        justify-content: center;
+    }
+
+    .navigation {
+        justify-content: center;
+    }
+
+    .top-book {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filters input {
+        box-sizing: border-box;
+        width: 100%;
+    }
