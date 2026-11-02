@@ -7,8 +7,10 @@
 		<title>
 			Emerald Escape
 		</title>
+		
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 		<link rel ="stylesheet" href="style/style.css"/>
-		<script src="scripts/generalScript.js" defer> </script>
 
 	</head>
 
@@ -16,21 +18,27 @@
 		
 		<div class="bannerArea">
 			<img src="Images/banner2.webp" alt="Ireland Landscape" />
-			<h1> Discover Ireland,</br> One escape at a time</h1>
+
+			<div class="bannerText">
+				<h1>Emerald Escapes</h1><br><br>
+
+				<h2>Discover Ireland,<br> One escape at a time.</h2>
+			</div>
+			
 		</div>
 
 
+		<!---------------------------------------------------------------------------------->
 		<div class="aboutUs">
 
 			<div class="boxStory">
 				<div class="link"><a href="index.html">Home</a></div>
 				<img src="Images/leprechaun.png" alt="leprechaun"/>
+				<button type="button" class="storyButton" data-bs-toggle="modal" data-bs-target="#storyModal">
+		       	 Our Story
+		   		</button>
+
 			</div>
-
-			
-				
-
-
 
 			<div class="boxExperience">
 				<div class="link"><a href="Experiences/experiences.html" target="_blank">Experiences</a></div>
@@ -44,25 +52,153 @@
 			</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 			<div class="boxAbout">
 				<div class="link"><a href="Contact/contact.html" target="_blank">Contact</a></div>
+				<img src="Images/shamrock.png" alt="Shamrock with irish flag theme"/>
+				<button type="button" class="storyButton" data-bs-toggle="modal" data-bs-target="#contactModal">
+        			About Us
+    			</button>
 			</div>
 		</div>
 
+
+		<!----------------------- Pop Up button for Home Box, Our Story ------------------------------------->
+
+
+		<div class="modal fade" id="storyModal" tabindex="-1" aria-labelledby="storyModalLabel" aria-hidden="true">
+
+   			<div class="modal-dialog modal-dialog-centered">
+
+        		<div class="modal-content">
+
+            		<div class="modal-header">
+                		<h5 class="modal-title" id="storyModalLabel">
+                   			 Our Story
+                		</h5>
+
+                		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            		</div>
+
+            		<div class="modal-body">
+		                <p>
+		                   Curious about us!! Our story is short but a lucky one, we chased our dream of helping others find the gold pot at the end of the rainbow and now we want to share our riches with you and help discover the heart of ireland..
+		                </p>
+           			</div>
+
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+		                    Close
+		                </button>
+		            </div>
+       			</div>
+   			</div>
+		</div> <!-- closing modal -->
+
+
+		<!-- Pop up box for contact box, about us------------------------------->
+
+		<div class="modal fade" id="contactModal" tabindex="-1"
+		     aria-labelledby="contactModalLabel" aria-hidden="true">
+
+		    <div class="modal-dialog modal-dialog-centered">
+		        <div class="modal-content">
+
+		            <div class="modal-header">
+		                <h5 class="modal-title" id="contactModalLabel">
+		                    About Us
+		                </h5>
+
+		                <button type="button" class="btn-close"
+		                        data-bs-dismiss="modal"
+		                        aria-label="Close"></button>
+		            </div>
+
+		            <div class="modal-body">
+		                <p>
+		                   Emerald Escapes, one of Ireland’s newest experiences to explore the emerald isle and start your irish adventure, inspiring people to create lasting memories while supporting local business, celebrating Irish culture and encouraging responsible tourism. Tag alone and discover a variety of experiences that suits your liking, either a family trip, a romantic escape or your next thrilling adventure, Emerald Escapes offers cosy countryside stays, outdoor activities, cultural attractions and scenic road trips that will help you immerse in Irish culture. “ Discover Ireland, One Escape at a time and get ready for your next adventure.
+		                </p>
+		            </div>
+
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+		                    Close
+		                </button>
+		            </div>
+		        </div>
+		    </div>
+		</div> <!------ Close Modal ------->
+
+
+
+		<!------------------------------------------------------------------------------------->
+
 		<div class="experienceOverview" id="experiences">
-			<h1>EXPERIENCE OVERVIEW</h1>
-		</div>
+
+			<div class="overviewHeading">
+				<h1>Our offrered experiences</h1>
+
+				<a href="Experiences/experiences.html" class=" overviewButton">
+					Explore more
+				</a>
+			</div>
+
+			<div class="overviewRow">
+		        <div class="overviewText">
+		            <h2>City Break</h2>
+		            <p>
+		                Discover Ireland’s vibrant cities, history and charming streets while enjoying local cafes, pubs and the lively atmosphere of famous cities.
+		            </p>
+		        </div>
+
+		        <div class="overviewImage">
+		            <img src="Images/cityBreak.png" alt="Dublin city break">
+		        </div>
+		    </div>
+
+		    <div class="overviewRow reverse">
+		        <div class="overviewText">
+		            <h2>Countryside & Cultural</h2>
+		            <p>
+		                Escape to a peaceful countryside retreat surrounded by breathtaking landscapes, luxurious spas and scenic viewpoints to enjoy the perfect balance of tranquility and adventure.
+		            </p>
+		        </div>
+
+		        <div class="overviewImage">
+		            <img src="Images/countrySide.jpg" alt="landscapes countryside">
+		        </div>
+		    </div>
+
+		    <div class="overviewRow">
+		        <div class="overviewText">
+		            <h2>Family</h2>
+		            <p>
+		                Create unforgettable memories for all ages, exploring wildlife, outdoor activities, thrilling attractions and magical moments for the whole family.
+		            </p>
+		        </div>
+
+		        <div class="overviewImage">
+		            <img src="Images/family.jpg" alt="Family picture">
+		        </div>
+		    </div>
+
+		    <div class="overviewRow reverse">
+		        <div class="overviewText">
+		            <h2>Culinary</h2>
+		            <p>
+		                Get a taste of Ireland's best, flavour and traditions that makes Ireland unique with famous tours, local beers and indulge in the Irish culture one taste at a time
+		            </p>
+		        </div>
+
+		        <div class="overviewImage">
+		            <img src="Images/culinary.jpg" alt="Irish food">
+		        </div>
+		    </div>	    
+		</div><!-- Close experience overview --->
+
+		<!-- JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<script src="scripts/generalScript.js"> </script>
+
 	</body>
 </html>
