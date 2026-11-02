@@ -3,7 +3,17 @@ body{
 background-color: #98FB98;
 }
 
-/********** MAIN SITE STYLE AREAS *************************/
+
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+
+
+
+/********** HOME PAGE *************************/
+
+/********** BANNER *******************/
 
 .bannerArea{
 	display:flex;
@@ -20,16 +30,52 @@ background-color: #98FB98;
 	object-fit: cover;
 }
 
-.bannerArea h1{
-	position: absolute;
-	top:50%;
-	right: 5%;	
+.bannerText{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding: 40px 7%;
+}
 
+.bannerText h1 {
+    color: black;
+    font-family: papyrus;
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+}
+
+.bannerText h2 {
     color: black;
     font-family: papyrus;
     font-size: 2rem;
+    margin: 0;
 }
 
+
+
+@media(max-width: 600px){
+
+    .bannerArea {
+        min-height: 50vh;
+    }
+
+    .bannerText {
+        padding: 25px;
+    }
+
+    .bannerText h2 {
+        font-size: 1.8rem;
+    }
+
+    .bannerText h1 {
+        font-size: 2rem;
+    }
+}
 
 /*********** LINKS MAIN SITE ************************/
 
@@ -56,11 +102,9 @@ background-color: #98FB98;
 
 }
 
-.aboutUs div{
-	display:flex;
+.aboutUs > div{
 	flex:1;
-	justify-content: center;
-	align-items: center;
+	min-height: 0;
 
 }
 
@@ -68,7 +112,6 @@ background-color: #98FB98;
 /***********************************/
 
 .boxStory{
-	padding-left: 0;
 	background-color:#5FFB17;
 	position: relative;
 }
@@ -77,21 +120,35 @@ background-color: #98FB98;
 	position:relative;
 	width:50%;
 	height:60%;
+    margin-top:50px;
+    margin-left:50px;
 	object-fit: contain;
 	overflow: hidden;
-	top:20%;
-	right:20%;
 }
 
 
 /***********************************/
 
+.boxExperience {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.slider {
+    position: relative;
+    width: 75%;
+    height: 220px;
+}
 
 .slider img {
   position: absolute;
-  inset: 70px;
-  width: 100%;
+  top:10px;
+  left:0;
   height: 100%;
+  width:100%;
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -102,22 +159,23 @@ background-color: #98FB98;
 }
 
 /***********************************/
-
+/*
 .boxExperience{
 	background-color: white;
 	position: relative;
 
 }
-
+ /*
 .boxExperience img{
 	position: absolute;
 	width: 65%;
 	height: 65%;
 	object-fit: cover;
 }
+*/
 
 @media(max-width: 600px){
-	.slideshow{
+	.slider{
 		height: 200px;
 	}
 }
@@ -128,26 +186,247 @@ background-color: #98FB98;
 .boxAbout{
 	background-color:#FF6700;
 	position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.experienceOverview{
-	display:flex;
-	min-height: 50vh;
-	justify-content: center;
-	align-items: center;
+.boxAbout img{
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+    margin-top: 35px;
 }
+
+
+
+.storyButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 25px;
+    background-color: #145214;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: papyrus;
+}
+
+
+.storyButton:hover {
+    background-color: #00ff00;
+    color: white;
+}
+
+.storyButton[data-bs-target="#storyModal"]:hover {
+    background-color: #FF6700;
+    color: white;
+}
+
+.boxAbout p {
+    padding: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+}
+
+/********* Responsive for all boxes **************************/
+@media (max-width: 700px) {
+
+    .aboutUs {
+        flex-direction: column;
+    }
+
+    .boxStory,
+    .boxExperience,
+    .boxAbout {
+        width: 100%;
+        min-height: 280px;
+    }
+
+    .boxStory img {
+        width: 40%;
+        height: 180px;
+    }
+
+    .boxAbout img {
+        width: 35%;
+        height: 150px;
+        margin-top: 25px;
+    }
+
+    .slider {
+        width: 75%;
+        height: 190px;
+    }
+
+    .link {
+        font-size: 1.5rem;
+    }
+
+}
+/******************** Experience Overview ********************************/
+
+
+
+.experienceOverview {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 5%;
+    gap: 15px;
+    /*background-color: #F5F1E8;*/
+}
+
+
+.overviewHeading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 30px;
+    background-color: #ccff99;
+    border-radius: 8px;
+    border-color:#006600 ;
+    border-style: solid;
+}
+
+.overviewHeading h1 {
+    margin: 0;
+    color: #28543A;
+    font-size: 1.8rem;
+    font-family: papyrus;
+}
+
+.overviewButton {
+    display: inline-block;
+    padding: 9px 22px;
+    background-color: #28543A;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+    font-family: papyrus;
+}
+
+.overviewButton:hover {
+    background-color: #477B5B;
+    color: white;
+
+}
+
+.overviewRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-height: 190px;
+    background-color: #ccff99;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.overviewRow.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.overviewText {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 30px;
+    text-align: center;
+    font-family: papyrus;
+    
+}
+
+.overviewText h2 {
+    color: #28543A;
+    margin-bottom: 10px;
+}
+
+.overviewText p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.overviewImage {
+    flex: 1;
+    height: 190px;
+}
+
+.overviewImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+
+    .overviewHeading {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .overviewHeading h1 {
+        font-size: 1.4rem;
+    }
+
+    .overviewRow,
+    .overviewRow.reverse {
+        flex-direction: column;
+    }
+
+    .overviewImage {
+        width: 100%;
+        height: 200px;
+    }
+
+    .overviewText {
+        padding: 20px;
+    }
+
+}
+
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+/***********************************************************************************************************/
 
 
 /**************** EXPERIENCES PAGE ***********************/
 
+.row{
+    margin-bottom: 10px;
+    font-family: papyrus;
+    text-align: center;
+    font-size: 150%;
+}
+
+.card-img-top {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
 
 
+a{
+    color:black;
+}
 
-
-
-
-
-
+.card-carousel-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
 
 
 
