@@ -1,157 +1,1118 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Experiences</title>
-		<link rel="stylesheet" href="../style/style.css"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Experiences: Emerald Escapes</title>
 	</head>
+		<!-- CSS Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<!-- General CSS -->
+		<link rel="stylesheet" href="../style/style.css"/>
+
 
 	<body>
-		<div id="header">
-				<div class="linkC boxStory"><a href="../index.html">Home</a></div>
-				<div class="linkC boxExperience"><a href="experiences.html" target="_blank">Experiences</a></div>
-				<div class="linkC boxAbout"><a href="../Contact/contact.html" target="_blank">Contact</a></div>
+
+		<!-- Banner Area -->
+		<div class="container-fluid">
+			<div class="row" style="height: 50px;">
+				<div class="col-4 boxStory">
+					<a href="../index.html">Home</a>
+				</div>
+				<div class="col-4 boxExperience">
+					<a  href="experiences.html" target="_blank">Experiences</a>
+				</div>		
+				<div class="col-4 boxAbout">
+					<a href="../Contact/contact.html" target="_blank">Contact</a>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Navigation Bar -->
+		<div class="row">
+			<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+				<div class="container">
+				    <a class="navbar-brand" href="../index.html" style="font-family: papyrus;">Emerald Escapes</a>
+				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				    	<span class="navbar-toggler-icon"></span>
+				    </button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+					    	<li class="nav-item">
+					        	<a class="nav-link active" aria-current="page" href="#">Experiences</a>
+					        </li>
+					        <div class="dropdown">
+					        	<button class="btn dropdown-toggle" type="button" id="dropdownMenuLink" 
+					        	data-bs-toggle="dropdown" aria-expanded="false"> Filters </button>
+
+					        	<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							        <li><button class="dropdown-item" type="button" data-filter="all">All experiences</button></li>
+							        <li><button class="dropdown-item" type="button" data-filter="city">City Break</button></li>
+							        <li><button class="dropdown-item" type="button" data-filter="cultural">Countryside Cultural</button></li>
+							        <li><button class="dropdown-item" type="button" data-filter="family">Family</button></li>
+							        <li><button class="dropdown-item" type="button" data-filter="culinary">Culinary</button></li>
+    							</ul>
+							</div>
+
+
+<!--
+
+
+								<a class="btn  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 50px;">
+							    	Filters
+							  	</a>
+
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li><a class="dropdown-item" href="#">Experience Type</a></li>
+									<li><a class="dropdown-item" href="#">Prices</a></li>
+									<li><a class="dropdown-item" href="#">Surprise Me</a></li>
+								</ul>
+							</div>
+-->					        
+					    </ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+
+		<!--------------------------------------------- Cards ------------------------------------------>
+		<div class="container my-4">
+		    <div class="row g-3">
+
+		    	<!------------------------------- CITY BREAK CARDS ------------------------------------->
+		        <!-- Card 1 -->
+		        <div class="col-md-3 experience-card" data-category="city" >
+		            <div class="card h-100">
+
+		                <!-- Carousel -->
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Cork_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Cork City">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Cork_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Cork View">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Cork_3.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Cork Castle">
+		                        </div>
+
+		                    </div>
+
+		                    <!-- Previous button -->
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <!-- Next button -->
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <!-- Static text -->
+		                <div class="card-body">
+		                    <h5 class="card-title">Cork City</h5>
+		                    <p class="card-text">
+		                        Discover The beaty of Cork city and its castles.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €50 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Cork City Break" data-price="50"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 2 -->
+		        <div class="col-md-3 experience-card" data-category="city" >
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Galway_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark hedges GoT">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Galway_2.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark hedges GoT">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Galway_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark Hedges GoT">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Galway City</h5>
+		                    <p class="card-text">
+		                        Travel to the colorful Galway city.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €50 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Galway City Break" data-price="50"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 3 -->
+		        <div class="col-md-3 experience-card" data-category="city" >
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Belfast_city.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Belfas City">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Titanic_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Titanic Museum">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Titanic_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Titanic Museum_2">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Belfast & Titanic</h5>
+		                    <p class="card-text">
+		                        Discover the birthplace of the Titanic and enjoy a walk on the museum.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €50 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Belfast City Break" data-price="50"> Book
+		                	</button>
+		                </div>
+		            </div>
+		        </div>
+
+
+		        <!----- Card 4 ------->
+		        <div class="col-md-3 experience-card" data-category="city">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Waterford_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Waterford Castle">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Waterford_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Waterford Castle lake">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Waterford_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Waterford city">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Waterford</h5>
+		                    <p class="card-text">
+		                        Discover the beautiful city of Waterford.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €50 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Waterford City Break" data-price="50"> Book
+		                	</button>
+		                </div> 
+		            </div><!--- Close Card -->
+		        </div><!-- Closes col-md-3 -->
+		    </div><!-- Closes Row -->
+
+
+		    <!-- Second Row ----------------------------------->
+
+		    <div class="row g-3">
+
+		    	<!------------------------------- Country Side Cultural CARDS ------------------------------------->
+		        <!-- Card 1 -->
+		        <div class="col-md-3 experience-card" data-category="cultural" >
+		            <div class="card h-100">
+
+		                <!-- Carousel -->
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Moher_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Moher Cliff">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Moher_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Moher Cliff View 1">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Moher_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Moher Cliff View 2">
+		                        </div>
+
+		                    </div>
+
+		                    <!-- Previous button -->
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <!-- Next button -->
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <!-- Static text -->
+		                <div class="card-body">
+		                    <h5 class="card-title">CLiffs of Moher</h5>
+		                    <p class="card-text">
+		                        Explore the stunning views of the Cliffs of  Moher
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €60 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Moher Cultural" data-price="60"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 2 -->
+		        <div class="col-md-3 experience-card" data-category="cultural">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/DarkHedges_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark hedges GoT">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/DarkHedges_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark hedges GoT">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/DarkHedges_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dark Hedges GoT">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">The Dark Hedges</h5>
+		                    <p class="card-text">
+		                        Explore where Games of Thrones was filmed!!.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €60 pp </strong>
+		                    </p>
+		                     <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Dark Hedges Cultural" data-price="60"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 3 -->
+		        <div class="col-md-3 experience-card" data-category="cultural">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Giant_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Giant Causeway View">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Giant_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Giat Causeway view 2">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/GiantCauseway.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Giant Causeway View 3">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Giant Causeway</h5>
+		                    <p class="card-text">
+		                       Giant Causeway tours and guides.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €60 pp </strong>
+		                    </p>
+		                     <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Giant Causeway Cultural" data-price="60"> Book
+		                	</button>
+		                </div>
+		            </div>
+		        </div>
+
+
+		        <!----- Card 4 ------->
+		        <div class="col-md-3 experience-card" data-category="cultural">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Farnham_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="FarnHam Estate">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Farnham_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="FarnHam Estate view">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Farnham_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="FarnHam Estate view 2">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Farnham Estate</h5>
+		                    <p class="card-text">
+		                        Get away from everything for a relazing luxury spa time.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €60 pp </strong>
+		                    </p>
+		                     <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Farnham Cultural" data-price="60"> Book
+		                	</button>
+		                </div> 
+		            </div><!--- Close Card -->
+		        </div><!-- Closes col-md-3 -->
+		    </div><!-- Closes Row 2 -->
+
+
+		    <!---- Row 3 --------------------------------------------------->
+
+		    <div class="row g-3">
+
+		    	<!------------------------------- Family CARDS ------------------------------------->
+		        <!-- Card 1 -->
+		        <div class="col-md-3 experience-card" data-category="family">
+		            <div class="card h-100">
+
+		                <!-- Carousel -->
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/EmeraldPark_1.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Emerald Park">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/EmeraldPark_2.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Emerald Park Attractions">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/EmeraldPark_3.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Rollercoaster">
+		                        </div>
+
+		                    </div>
+
+		                    <!-- Previous button -->
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <!-- Next button -->
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <!-- Static text -->
+		                <div class="card-body">
+		                    <h5 class="card-title">Emerald Park</h5>
+		                    <p class="card-text">
+		                        Tickets and offers for a family trip to Emerald Park.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €35 pp </strong>
+		                    </p>
+		                     <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Emerald Park Cultural" data-price="35"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 2 -->
+		        <div class="col-md-3 experience-card" data-category="family">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Zoo_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dublin Zoo">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Zoo_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dublin Zoo 1">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Zoo_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Dublin Zoo 2">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Dublin Zoo</h5>
+		                    <p class="card-text">
+		                        Zoo Adventures and animal experiences.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €35 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Zoo Cultural" data-price="35"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 3 -->
+		        <div class="col-md-3 experience-card" data-category="family">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Zipit_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Zipit Zipline">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Zipit_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Zipit Zipline 2">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Zipit_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Zipit Zipline 3">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Zipit</h5>
+		                    <p class="card-text">
+		                       Make your way trough nature with the family.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €35 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Zipit Cultural" data-price="35"> Book
+		                	</button>
+		                </div>
+		            </div>
+		        </div>
+
+
+		        <!----- Card 4 ------->
+		        <div class="col-md-3 experience-card" data-category="family">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Trees_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Avondale Park">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Trees_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Avondale Tree">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Trees_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Trees Avondale">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Treetop Avondale</h5>
+		                    <p class="card-text">
+		                        Connect with nature at Avondale.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €35 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Avondale Cultural" data-price="35"> Book
+		                	</button>
+		                </div> 
+		            </div><!--- Close Card -->
+		        </div><!-- Closes col-md-3 -->
+		    </div><!-- Closes Row 3 -->
+
+
+		    <!----- Row 4 -------------------------------------->
+		    <div class="row g-3">
+
+		    	<!------------------------------- Culinary CARDS ------------------------------------->
+		        <!-- Card 1 -->
+		        <div class="col-md-3 experience-card" data-category="culinary">
+		            <div class="card h-100">
+
+		                <!-- Carousel -->
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Guiness_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Guniess Factory">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Guiness_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Guiness Tour">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Guiness_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Guiness Storehouse">
+		                        </div>
+
+		                    </div>
+
+		                    <!-- Previous button -->
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <!-- Next button -->
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <!-- Static text -->
+		                <div class="card-body">
+		                    <h5 class="card-title">Guiness Tour</h5>
+		                    <p class="card-text">
+		                        Book a tour and meet the faomus Guiness Factory.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €40 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Guiness Culinary" data-price="40"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 2 -->
+		        <div class="col-md-3 experience-card" data-category="culinary">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Jameson_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Jameson Distillery">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Jameson_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Jameson Distillery 2">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Jameson_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Jameson D. 3">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Jameson Distillery</h5>
+		                    <p class="card-text">
+		                        Experience the irish whisky the right way.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €40 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Jameson Culinary" data-price="40"> Book
+		                	</button>
+		                </div>
+
+		            </div>
+		        </div>
+
+
+		        <!-- Card 3 -->
+		        <div class="col-md-3 experience-card" data-category="culinary">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Wine_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Wine Tasting">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Wine_2.webp"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Wine Tasting 2">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Wine_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Wine tasting  3">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Wine Tasting</h5>
+		                    <p class="card-text">
+		                       Get your place in one of our wine tasting experiences.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €40 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Wine Culinary" data-price="40"> Book
+		                	</button>
+		                </div>
+		            </div>
+		        </div>
+
+
+		        <!----- Card 4 ------->
+		        <div class="col-md-3 experience-card" data-category="culinary">
+		            <div class="card h-100">
+
+		                <div class="carousel slide" data-bs-interval="false">
+		                    <div class="carousel-inner">
+
+		                        <div class="carousel-item active">
+		                            <img src="../Images/Christmas_1.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Christmas Market">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Christmas_2.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Christmas Market Galway">
+		                        </div>
+
+		                        <div class="carousel-item">
+		                            <img src="../Images/Christmas_3.jpg"
+		                                 class="d-block w-100 card-carousel-img"
+		                                 alt="Christmas Market 3">
+		                        </div>
+
+		                    </div>
+
+		                    <button class="carousel-control-prev" type="button"
+		                            data-bs-slide="prev">
+		                        <span class="carousel-control-prev-icon"></span>
+		                    </button>
+
+		                    <button class="carousel-control-next" type="button"
+		                            data-bs-slide="next">
+		                        <span class="carousel-control-next-icon"></span>
+		                    </button>
+		                </div>
+
+		                <div class="card-body">
+		                    <h5 class="card-title">Chirstmas Market</h5>
+		                    <p class="card-text">
+		                        Limited time Christmas market in galway.
+		                    </p>
+		                    <p class="cardPrice">
+		                    	<strong> €40 pp </strong>
+		                    </p>
+		                    <button class="btn btn-outline-success selectExperience" 
+		                    type="button" data-name="Christmas Culinary" data-price="40"> Book
+		                	</button>
+		                </div> 
+		            </div><!--- Close Card -->
+		        </div><!-- Closes col-md-3 -->
+		    </div><!-- Closes Row 4 -->
+		</div><!--Closes Container -->
+
+
+
+		<footer>
+			<div class="text-center my-4">
+				<button id="selectedBooking" class="btn btn-outline-success btn-lg" type="button">
+					Proceed with your booking
+				</button>
+			</div>
+		</footer>
+
+		<!-- Proceeding with a booking -->
+
+
+<!----------------------------------------------- Booking Modal ------------------->
+
+		<div class="modal fade" id="bookingModal" tabindex="-1"
+		     aria-labelledby="bookingModalLabel" aria-hidden="true">
+
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+
+		            <div class="modal-header">
+		                <h5 class="modal-title" id="bookingModalLabel">
+		                    Your Booking
+		                </h5>
+
+		                <button type="button" class="btn-close"
+		                        data-bs-dismiss="modal"
+		                        aria-label="Close">
+		                </button>
+		            </div>
+
+		            <div class="modal-body">
+
+		                <h6>Selected Experiences:</h6>
+		                <ul id="booking-list"></ul>
+
+		                <hr>
+
+		                <p>
+		                	<label for="booking-people" class="form-label">
+		                		Number of people:
+		                	</label>
+
+		                	<input type="number" id="booking-people" class="form-control"
+		                			value ="1" min="1">
+		                </p>
+
+		                <p>
+				            <label for="booking-date" class="form-label">
+				                Booking date:
+				            </label>
+
+				            <input type="date" id="booking-date" class="form-control">
+
+		                </p>
+
+		                <label for="booking-email" class="form-label">
+						    Email address:
+						</label>
+
+						<input type="email" id="booking-email" class="form-control" placeholder="Enter your email address" required>
+
+		                <hr>
+
+		                <h5>
+		                    Total: €<span id="booking-total">0</span>
+		                </h5>
+
+		                <div id="booking-confirmation" class="alert alert-success d-none" role="alert">
+
+						    <h5>Your booking has been confirmed!</h5>
+						    <p>Thank you for booking with Emerald Escapes.</p>
+						    
+						    <p><strong>Experiences:</strong></p>
+						    <ul id="confirmed-experiences"></ul>
+						    
+						    <P><strong>Booking Date:</strong>
+						    	<span id="confirmed-date"></span>
+						    </p>
+
+						    <p><strong>Number of people:</strong>
+						    	<span id="confirmed-people"></span>
+							</p>
+
+							<p><strong>Email address:</strong>
+    							<span id="confirmed-email"></span>
+							</p>
+
+						    <p><strong>Total:</strong>
+						    	€<span id="confirmed-total"></span>
+						    </p>
+
+						    <p><strong>	We will contact you soon with all your details.</strong></p>
+
+						</div>
+
+		            </div>
+
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-secondary"
+		                        data-bs-dismiss="modal">
+		                    Close
+		                </button>
+
+		                <button type="button" class="btn btn-success"
+		                        id="proceed-booking">
+		                    Proceed
+		                </button>
+		                
+		            </div>
+
+		        </div>
+		    </div>
 		</div>
 
 
 
 
+		<!-- JavaScript -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+		<!-- General Scripts -->
 
-
-		<!-- Navigation -->
-    <header id="header">
-        
-        <a href="../Booking/booking.html" class="top-book">Book Now</a>
-
-    </header>
-
-
-
-    <!-- Page introduction -->
-    <section class="intro">
-        <h1>Emerald Escapes</h1>
-        <p>
-            Blah Blah blah and more blah blah
-        </p>
-    </section>
-
-    <!-- Filters -->
-    <section class="filters">
-        <input
-            type="search"
-            id="search"
-            placeholder="Search experiences..."
-            aria-label="Search experiences">
-
-        <select id="category" aria-label="Filter by category">
-            <option value="all">All Categories</option>
-            <option value="relaxation">City Break</option>
-            <option value="food">Culinary</option>
-            <option value="outdoor">Family</option>
-            <option value="culture">Countryside Cultural</option>
-        </select>
-
-        <select id="price" aria-label="Filter by price">
-            <option value="all">Any Price</option>
-            <option value="50">Up to €50</option>
-            <option value="100">Up to €100</option>
-            <option value="101">Over €100</option>
-        </select>
-
-        <button type="button" id="resetFilters">
-            Reset Filters
-        </button>
-    </section>
-
-
-
-
-
-
-
-
-
-    <p id="resultCount" aria-live="polite"></p>
-
-    <!-- Experience cards -->
-    <main class="experience-grid">
-
-        <article class="experience-card"
-                 data-category="relaxation" data-price="85">
-            <img src="../Images/FarmHam.jpg" alt="Farm spa retreat">
-
-            <div class="card-content">
-                <p class="category-label">RELAXATION</p>
-                <h2>Farm Spa Retreat</h2>
-                <p>Enjoy a peaceful escape surrounded by the Irish countryside.</p>
-
-                <div class="card-bottom">
-                    <span class="experience-price">From €85</span>
-                    <a href="../Booking/booking.html"
-                       class="book-button">Book Now</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="experience-card"
-                 data-category="food" data-price="35">
-            <img src="../Images/Whiskey.jpg" alt="Irish whiskey tasting">
-            
-            <div class="card-content">
-                <p class="category-label">FOOD & DRINK</p>
-                <h2>Whiskey Tasting</h2>
-                <p>Discover Irish whiskey and learn about its history and craft.</p>
-
-                <div class="card-bottom">
-                    <span class="experience-price">From €35</span>
-                    <a href="../Booking/booking.html"
-                       class="book-button">Book Now</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="experience-card"
-                 data-category="outdoor" data-price="50">
-            <img src="../Images/Hiking.jpg" alt="Irish countryside hiking">
-            
-            <div class="card-content">
-                <p class="category-label">OUTDOOR</p>
-                <h2>Countryside Adventure</h2>
-                <p>Explore beautiful landscapes and discover Ireland outdoors.</p>
-
-                <div class="card-bottom">
-                    <span class="experience-price">From €50</span>
-                    <a href="../Booking/booking.html"
-                       class="book-button">Book Now</a>
-                </div>
-            </div>
-        </article>
-
-        <article class="experience-card"
-                 data-category="culture" data-price="45">
-            <img src="../Images/Pottery.jpg" alt="Pottery workshop">
-            
-            <div class="card-content">
-                <p class="category-label">ARTS & CULTURE</p>
-                <h2>Pottery Workshop</h2>
-                <p>Try a creative workshop and make something of your own.</p>
-
-                <div class="card-bottom">
-                    <span class="experience-price">From €45</span>
-                    <a href="../Booking/booking.html"
-                       class="book-button">Book Now</a>
-                </div>
-            </div>
-        </article>
-
-    </main>
-
-    <p id="noResults" hidden>
-        No experiences match your filters. Try changing your search.
-    </p>
-				
-
+		<script src="../scripts/generalScript.js"/></script>
 	</body>
 </html>
