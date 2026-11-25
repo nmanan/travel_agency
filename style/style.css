@@ -1,19 +1,12 @@
 body{
 
-background-color: #98FB98;
+    font-family: papyrus, fantasy;
+    background-color: #98FB98;
 }
-
-
-/***********************************************************************************************************/
-/***********************************************************************************************************/
-/***********************************************************************************************************/
-/***********************************************************************************************************/
-
-
 
 /********** HOME PAGE *************************/
 
-/********** BANNER *******************/
+/*****************************/
 
 .bannerArea{
 	display:flex;
@@ -56,28 +49,7 @@ background-color: #98FB98;
     margin: 0;
 }
 
-
-
-@media(max-width: 600px){
-
-    .bannerArea {
-        min-height: 50vh;
-    }
-
-    .bannerText {
-        padding: 25px;
-    }
-
-    .bannerText h2 {
-        font-size: 1.8rem;
-    }
-
-    .bannerText h1 {
-        font-size: 2rem;
-    }
-}
-
-/*********** LINKS MAIN SITE ************************/
+/***********************************/
 
 .link{
 	position: absolute;
@@ -99,12 +71,14 @@ background-color: #98FB98;
 	display:flex;
 	min-height: 50vh;
 	justify-content: center;
+    align-items: stretch;
 
 }
 
 .aboutUs > div{
 	flex:1;
 	min-height: 0;
+    position:relative;
 
 }
 
@@ -116,16 +90,12 @@ background-color: #98FB98;
 	position: relative;
 }
 
-.boxStory img{
-	position:relative;
-	width:50%;
-	height:60%;
-    margin-top:50px;
-    margin-left:50px;
-	object-fit: contain;
-	overflow: hidden;
+.boxStory img {
+    width: 50%;
+    height: 55%;
+    margin-top: 50px;
+    object-fit: contain;
 }
-
 
 /***********************************/
 
@@ -141,6 +111,7 @@ background-color: #98FB98;
     position: relative;
     width: 75%;
     height: 220px;
+    overflow: hidden;
 }
 
 .slider img {
@@ -158,27 +129,7 @@ background-color: #98FB98;
 	opacity: 1;
 }
 
-/***********************************/
-/*
-.boxExperience{
-	background-color: white;
-	position: relative;
 
-}
- /*
-.boxExperience img{
-	position: absolute;
-	width: 65%;
-	height: 65%;
-	object-fit: cover;
-}
-*/
-
-@media(max-width: 600px){
-	.slider{
-		height: 200px;
-	}
-}
 
 /***********************************/
 
@@ -191,20 +142,28 @@ background-color: #98FB98;
     justify-content: center;
 }
 
-.boxAbout img{
+
+.boxAbout img {
     width: 70%;
     height: 60%;
-    object-fit: contain;
     margin-top: 35px;
+    object-fit: contain;
 }
 
+.boxAbout p {
+    padding: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+}
 
+/************************************/
 
 .storyButton {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 25px;
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 20px;
     background-color: #145214;
     color: white;
     border: none;
@@ -225,51 +184,8 @@ background-color: #98FB98;
     color: white;
 }
 
-.boxAbout p {
-    padding: 30px;
-    font-size: 1.2rem;
-    text-align: center;
-    color: black;
-}
 
-/********* Responsive for all boxes **************************/
-@media (max-width: 700px) {
-
-    .aboutUs {
-        flex-direction: column;
-    }
-
-    .boxStory,
-    .boxExperience,
-    .boxAbout {
-        width: 100%;
-        min-height: 280px;
-    }
-
-    .boxStory img {
-        width: 40%;
-        height: 180px;
-    }
-
-    .boxAbout img {
-        width: 35%;
-        height: 150px;
-        margin-top: 25px;
-    }
-
-    .slider {
-        width: 75%;
-        height: 190px;
-    }
-
-    .link {
-        font-size: 1.5rem;
-    }
-
-}
-/******************** Experience Overview ********************************/
-
-
+/******************** Overview ********************************/
 
 .experienceOverview {
     display: flex;
@@ -277,7 +193,7 @@ background-color: #98FB98;
     width: 100%;
     padding: 30px 5%;
     gap: 15px;
-    /*background-color: #F5F1E8;*/
+    background-color: #F5F1E8;
 }
 
 
@@ -367,7 +283,30 @@ background-color: #98FB98;
     object-fit: cover;
 }
 
-@media (max-width: 600px) {
+/********* Media querys Main page **************************/
+
+@media(max-width: 576px){
+
+    .bannerArea {
+        min-height: 50vh;
+    }
+
+    .bannerText {
+        padding: 25px;
+    }
+
+    .bannerText h2 {
+        font-size: 1.8rem;
+    }
+
+    .bannerText h1 {
+        font-size: 2rem;
+    }
+
+    .slider{
+        width:75%;
+        height: 190px;
+    }
 
     .overviewHeading {
         flex-direction: column;
@@ -393,30 +332,62 @@ background-color: #98FB98;
     .overviewText {
         padding: 20px;
     }
+}
+
+@media (max-width: 768px) {
+
+    .aboutUs {
+        flex-direction: column;
+    }
+
+    .aboutUs .boxStory,
+    .aboutUs .boxExperience,
+    .aboutUs .boxAbout {
+        flex: 0 0 auto;
+        aspect-ratio: 1/1;
+        min-height: 0;
+    }
+
+    .boxStory img {
+        width: 40%;
+        height: 45%;
+        margin-top: 35px;  
+    }
+
+    .boxAbout img {
+        width: 40%;
+        height: 45%;
+        margin-top: 35px;
+    }
+
+    .slider {
+        width: 75%;
+        height: 190px;
+    }
+
+    .link {
+        font-size: 1.3rem;
+    }
+
+    .link > a:hover {
+        font-size: 1.5rem;
+    }
+
 
 }
 
-/***********************************************************************************************************/
-/***********************************************************************************************************/
+
 /***********************************************************************************************************/
 /***********************************************************************************************************/
 
+/**************** EXPERIENCE PAGE ***********************/
 
-/**************** EXPERIENCES PAGE ***********************/
-
-.row{
+.navigation-experience{
     margin-bottom: 10px;
     font-family: papyrus;
     text-align: center;
     font-size: 150%;
 }
-
-.card-img-top {
-width: 100%;
-height: 200px;
-object-fit: cover;
-}
-
 
 a{
     color:black;
@@ -428,36 +399,63 @@ a{
     object-fit: cover;
 }
 
-
-
-/********* CONTACT SITE PAGE **************************/
-
-#header{
-	display:flex;
-
-}
-#header{
-	background:#00FA9A;
-	font-size:100%;
-	width:100%;
-	height: 100px;
-
+.experience-card {
+    font-family: papyrus;
 }
 
-.linkC{
-	display:flex;
-	justify-content: space-around;
-	align-items: center;
-	font-size: 2rem;
-	width:100%;
-	font-family: papyrus;
+
+@media (max-width: 768px) {
+
+    .navigation-experience .boxStory,
+    .navigation-experience .boxExperience,
+    .navigation-experience .boxAbout {
+        min-height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-carousel-img {
+        height: 200px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
 }
 
-.linkC a{
-	color: black;
+
+@media (max-width: 576px) {
+
+    .navigation-experience .boxStory,
+    .navigation-experience .boxExperience,
+    .navigation-experience .boxAbout {
+        min-height: 40px;
+    }
+
+    .card-carousel-img {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .selectExperience {
+        width: 100%;
+    }
+
 }
 
-/************* FORM CONTACT PAGE **************************/
+
+/***********************************************************************************************************/
+/***********************************************************************************************************/
+
+/********* CONTACT SITE PAGE *************************/
 
 .contact {
   max-width: 750px;
@@ -474,7 +472,7 @@ a{
   font-family: papyrus;
 }
 
-.contact > p {
+#contactIntroduction > p {
   text-align: center;
   line-height: 1.6;
   font-family: papyrus;
@@ -543,238 +541,47 @@ a{
   font-family: papyrus;
 }
 
-@media (max-width: 600px) {
-  .contact-page {
-    margin: 20px 12px;
-    padding: 20px;
-  }
-}
 
-
-/*************************************************/
-
-/* Navigation */
-#header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px 5%;
-    background-color: #f0f2ff;
-    border-bottom: 5px solid #293b83;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-.navigation a {
-    color: #293b83;
-    text-decoration: none;
-}
-
-.navigation a:hover {
-    text-decoration: underline;
-}
-
-.top-book,
-.book-button {
-    display: inline-block;
-    background-color: #fb9024;
-    color: #102849;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.top-book {
-    padding: 16px 24px;
-    white-space: nowrap;
-}
-
-/* Introduction */
-.intro {
-    text-align: center;
-    padding: 45px 20px 25px;
-}
-
-.intro h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+/************************************************/
+.contact-form span {
+    display: block;
+    color: red;
+    font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
-.intro p {
-    color: #444;
-    line-height: 1.6;
-}
-
-/* Filters */
-.filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 20px 5%;
-}
-
-.filters input,
-.filters select,
-.filters button {
-    padding: 12px 15px;
-    border: 1px solid #c5cbe0;
-    border-radius: 7px;
-    background-color: white;
-    font: inherit;
-}
-
-.filters input {
-    flex: 1;
-    min-width: 180px;
-}
-
-.filters button {
-    cursor: pointer;
-}
-
-.filters button:hover {
-    background-color: #e3e7f7;
-}
-
-#resultCount {
-    margin: 10px 5%;
-    color: #444;
-}
-
-/* Cards grid */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-    padding: 20px 5% 50px;
-}
-
-/* Individual card */
-.experience-card {
-    background-color: #f0f2ff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
-    transition: transform 0.25s ease;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-}
-
-.experience-card[hidden] {
-    display: none;
-}
-
-.experience-card img {
-    display: block;
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 22px;
-}
-
-.category-label {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: #5869a8;
-}
-
-.card-content h2 {
-    font-size: 1.7rem;
-    margin: 10px 0;
-}
-
-.card-content > p:not(.category-label) {
-    color: #444;
-    line-height: 1.6;
-}
-
-.card-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
+#confirmation {
+    color: #28543A;
+    text-align: center;
+    font-size: 1.2rem;
     margin-top: 20px;
 }
 
-.experience-price {
-    font-size: 1.3rem;
-    font-weight: bold;
+.booking-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.book-button {
-    padding: 14px 20px;
+.booking-checkbox label {
+    margin-bottom: 0;
 }
 
-.top-book:hover,
-.book-button:hover {
-    background-color: #e77b12;
+.booking-checkbox input {
+    width: auto;
+    margin: 0;
 }
 
-#noResults {
-    text-align: center;
-    padding: 20px;
+.contact-form input[type="checkbox"] {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
-/* Responsive layout */
-@media (max-width: 750px) {
-    #header {
-        flex-wrap: wrap;
-    }
-
-    .navigation {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .experience-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .experience-card img {
-        height: 240px;
-    }
+.contact-form input[type="checkbox"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
 }
-
-@media (max-width: 450px) {
-    #header {
-        justify-content: center;
-    }
-
-    .navigation {
-        justify-content: center;
-    }
-
-    .top-book {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .filters {
-        align-items: stretch;
-        flex-direction: column;
-    }
-
-    .filters input {
-        box-sizing: border-box;
-        width: 100%;
-    }
